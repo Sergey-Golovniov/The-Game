@@ -1,0 +1,16 @@
+
+.changeScreen{
+    position:absolute;
+    right:0;
+    top:0;
+    opacity:0.2;
+}
+
+
+.view{
+    margin:20px;
+border:1px solid;
+height:600px;
+width:800px;
+
+}
