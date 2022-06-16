@@ -1,20 +1,20 @@
-// let forScreen = false;
-// document.addEventListener('keydown', function (event) {
-//     if(event.code == 'KeyQ'&&forScreen){
-//     if (document.fullscreenElement) {
-//       document.exitFullscreen();
-//     } else {
-//       document.documentElement.requestFullscreen();
-//     }
-// }
-// forScreen = (event.code == 'ControlRight'||event.code == 'ControlLeft')?true:false;
-//   }, false);
-
-let changeScreen = document.querySelector('.changeScreen');
-changeScreen.addEventListener('click', function(){
-            if (document.fullscreenElement) {
-              document.exitFullscreen();
-            } else {
-              document.documentElement.requestFullscreen();
-            }
+"use strict"
+document.querySelectorAll("header ul li")[0].style.backgroundColor = '#ff3f40';
+document.querySelectorAll("header ul li").forEach(element => {
+     element.addEventListener('click',()=>{
+          document.querySelectorAll("header ul li").forEach(element => {
+               element.style.backgroundColor = 'transparent';
+          });
+          element.style.backgroundColor = '#ff3f40';
+     })
 });
+
+
+setInterval(() => {
+     console.log(document.documentElement.clientWidth + 'px');
+     document.querySelector("body").style.width = document.documentElement.clientWidth + 'px';
+
+     document.querySelectorAll(".background").forEach(element => {
+          element.style.width = document.documentElement.clientWidth + 'px';
+     });
+}, 100);
