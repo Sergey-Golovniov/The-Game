@@ -237,6 +237,8 @@ header ul li{
      letter-spacing: 0.01em;
      color: #000000;
      opacity: 0.8;
+
+     text-align: center;
 }
 .third-block p {
      font-family: 'Open Sans';
@@ -322,6 +324,7 @@ header ul li{
      color: #000000;
 
      margin:0;
+     text-align: center;
 }
 .fourth-block .introductory p {
      opacity: 0.7;
@@ -390,6 +393,7 @@ header ul li{
     flex-wrap: wrap;
     flex-direction: row;
     align-items:center;
+    justify-content: center;
 }
 .fourth-block .main .contacts li{
      opacity: 0.8;
@@ -455,9 +459,11 @@ header ul li{
      flex-wrap: wrap;
      flex-direction: row;
      align-items:center;
+
+     width:100%;
 }
 .fifth-block form input[type="text"]{
-     width: 521px;
+     width: 70%;
      height: 79px;
 
      border:none;
@@ -484,6 +490,7 @@ header ul li{
 
 /* SIXTH-PART */
 .sixth-block{
+     width:100%;
      display: flex; gap: 0px;
      flex-direction: row;
      align-items:center;
@@ -541,7 +548,7 @@ header ul li{
      background-color: #e6e6e6;
      padding: 0 0 0 20px;
 }
-.sixth-block .main form input[name='Name']{grid-area: name; color:red;}
+.sixth-block .main form input[name='Name']{grid-area: name;}
 .sixth-block .main form input[name='Mail'] {grid-area: mail;}
 .sixth-block .main form input[name='Message'] {grid-area: message;}
 .sixth-block .main form input[type='submit'] {
@@ -617,7 +624,6 @@ footer span{
 }
 footer ul {
      display: flex; gap: 20px;
-     flex-wrap: wrap;
      flex-direction: row;
      align-items:center;
 
@@ -631,17 +637,11 @@ footer ul {
 footer ul li{
      color:white;
 }
-
-
-
 @media (max-width:1300px){
      .wrapper{
           width:1000px;
      }
-          .first-block {
-               height: 1000px;
-          }
-          .first-block .background {
+          .first-block, .first-block .background {
                height: 1000px;
           }
           .first-block .flex {
@@ -651,17 +651,17 @@ footer ul li{
      
                height: 800px;
           }
-           .first-block .flex .flex-2{
-                height:300px;
-                flex-direction: column;
-                align-items: center;
-               }
-               .first-block .flex .flex-2 h1{
-                    text-align: center;
-               }
-           .first-block .flex video{
+          .first-block .flex .flex-2{
+               height:300px;
+               flex-direction: column;
+               align-items: center;
+          }
+          .first-block .flex .flex-2 h1{
+               text-align: center;
+          }
+          .first-block .flex video{
                 height:50%;
-           }
+          }
 
            
            .second-block {
@@ -764,7 +764,9 @@ footer ul li{
      .fifth-block form{
          justify-content: center;
      }
-
+     .fifth-block form input[type="text"] {
+          width: 100%;
+     }
 
      
      .sixth-block {
@@ -777,21 +779,180 @@ footer ul li{
           margin:auto;
 
           align-items: center;
+          width:100%;
      }
      .sixth-block .contact-info {
-          width: 100%;
+          width: 80%;
           position: relative;
 
           transform: translateY(50px);
      }
-          .sixth-block .introductory{
-               display:flex;
-               flex-direction: column;
-               align-items: center;
-          }
+     .sixth-block .main {
+          width: 80%;
+     }
+     .sixth-block .introductory{
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+     }
 }
 @media (max-width:800px){
      .wrapper{
           width:600px;
      }
+     .third-block .grid {
+          display: grid;
+          gap: 20px;
+
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(8, 1fr);
+
+          margin: 50px 0 50px 0;
+     }
+     .fifth-block h3 {
+          width: 100%;
+     }
+     footer {
+          display: flex; gap: 10px;
+          flex-direction: column;
+          align-items:center;
+     }
+     footer span {
+          margin-top: 20px;
+          top: 0px;
+          left: 0px;
+     }
+     footer ul {
+          float: none;
+          top: 0px;
+          right: 0px;
+     }
+}
+@media (max-width:650px) {
+     .wrapper {
+          width: 500px;
+     }
+          .first-block, .first-block .background {
+               height: 800px;
+          }
+     .first-block .flex {
+          height: 600px;
+     }
+     .first-block .flex .flex-2 {
+          height: 400px !important;
+     }
+     .first-block .flex video {
+          height: 25%;
+          width:300px;
+     }
+     .sixth-block .contact-info {
+     display: flex; gap: 30px;
+     flex-wrap: wrap;
+     flex-direction: column;
+     align-items:center;
+     }
+     .sixth-block .contact-info p {
+          margin:100px 0 0 0px; 
+     }
+
+     .sixth-block .contact-info span {
+          margin: 0;
+     }
+}
+@media (max-width:500px){
+     .wrapper {
+               width: 300px;
+          }
+          header {
+               width: 100%;
+               height:200px;
+
+               background-color: #272727;
+          }
+     
+          header ul {
+               flex-wrap: wrap;
+               height:50%;
+               width:100%;
+               padding:0;
+          }
+          
+          
+          .first-block .flex .flex-2 h1 {
+               width:320px;
+               font-size: 40px;
+               text-align: center;
+          }
+
+
+          .second-block .grid {
+               width: 100%;
+
+
+                    grid-template-columns: 300px;
+                    grid-template-rows: repeat(4, 250px);
+          }
+          .second-block .grid .card {
+               width:300px;
+          }
+          
+
+
+          .fourth-block {
+               gap: 150px;
+               height: 2300px;
+          }
+          .fourth-block .smth {
+               height: 400px;
+               width: 300px;
+               margin:0;
+          }
+          .fourth-block .introductory {
+               height:300px;
+          }
+          .fourth-block .introductory .line {
+              transform: translateY(80px);
+          }
+
+
+          
+          .fifth-block {
+               width: 100%;
+               height: 700px;
+          }
+
+          .fifth-block .background {
+               height: 700px;
+          }
+
+          .fifth-block h3 {
+               margin: 0;
+               height:260px;
+          }
+
+          
+          
+          .sixth-block .main form {
+                    gap: 20px;
+               
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(4,70px);
+
+                    grid-template-areas:'name'
+                                        'mail'
+                                        'message'
+                                        'submit';
+          }
+
+          
+          
+          .sixth-block .contact-info {
+               height:380px;
+               width: 100%;  
+          }
+          .sixth-block .contact-info p {
+               margin-top: 50px;
+          }
+      
+
 }
